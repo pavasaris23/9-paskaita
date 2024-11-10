@@ -1,0 +1,374 @@
+/* General Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: lato;
+}
+
+.container, .container-menu {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    gap: 100px;
+}
+
+.container-menu {
+    justify-content: space-between;
+}
+
+/* Navbar */
+nav {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .sign-in {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('content/bg-masthead.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.email-signup {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.email-signup input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.email-signup button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    filter: brightness(0.75)
+}
+
+.email-signup button:hover {
+    filter: brightness(1)
+}
+
+
+/* Features Section */
+.features {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+.feature:hover{
+    color: #007bff;
+    cursor: pointer;
+}
+.feature {
+    width: 30%;
+    margin: 20px auto;
+}
+
+.icon {
+    font-size: 40px;
+    color: #007bff;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+p {
+    color: #6c757d;
+    padding-top: 10px;
+}
+
+/* Information Section */
+.info {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.info-item:nth-child(even) {
+    flex-direction: row;
+}
+
+.info-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.info-item img {
+    width: 50%;
+    height: auto;
+    margin: 0;
+}
+
+/* Text container styling */
+.info-item div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.info-item h3, .info-item p {
+    margin: 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    width: 30%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.testimonial img:hover {
+    transform: scale(1.2);
+}
+
+
+/* Call to Action Section */
+.cta {
+    background-image: url('content/bg-masthead.jpg');
+    background-size: cover;
+    color: white;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.container-footer {
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    margin-left: 10%;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer p {
+    color: #6c757d;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container-menu {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .container, .container-info {
+        width: 100%;
+        display: block;
+    }
+
+    /* Navbar */
+    nav .logo {
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    nav .sign-in {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 50px 10px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .email-signup {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .email-signup input,
+    .email-signup button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Features Section */
+    .features .feature {
+        width: 100%;
+        margin: 20px 0;
+        padding-bottom: 32px;
+    }
+    .feature h3 {
+        font-size: 28px;
+        font-weight: 500;
+    }
+    .feature p{
+        font-size: 18px;
+        font-weight: lighter;
+    }
+    .icon {
+        font-size: 64px;
+    }
+
+
+    /* Information Section */
+    .info {
+        flex-direction: column;
+    }
+
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        display: block;
+    }
+
+    .info-item img, 
+    .info-item div {
+        width: 100%;
+    }
+
+    .info-item img {
+        height: auto; 
+    }
+
+    .info-item div {
+        padding: 15px; 
+        display: block; 
+    }
+
+    .info-item h3 {
+        font-size: 28px;
+        text-align: left;
+        margin-left: 24px;
+        margin-right: 12px;
+        font-weight: 500;
+    }
+    .info-item p {
+        font-size: 18px;
+        text-align: left;
+        margin-left: 24px;
+        margin-right: 32px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+    /* Testimonials Section */
+    .testimonials h2 {
+        font-size: 24px;
+    }
+
+    .testimonial {
+        width: 100%;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+
+    .testimonial img {
+        width: 160px;
+        height: 160px;
+    }
+
+    /* Call to Action Section */
+    .cta {
+        padding: 50px 10px;
+        text-align: center;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+    .container-footer{
+        gap: 10px;
+        margin-left: 0px;
+        padding: 0;
+    }
+    /* Footer */
+    footer {
+        text-align: center;
+        font-size: 12px;
+        
+    }
+    footer p {
+        padding: 0;
+        text-align: center;
+        font-size: 12px;
+        margin-right: 24px;
+    }
+}
